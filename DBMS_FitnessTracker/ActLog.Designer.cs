@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.history = new System.Windows.Forms.Label();
-            this.txthistory = new System.Windows.Forms.TextBox();
-            this.addnew = new System.Windows.Forms.Label();
             this.actname = new System.Windows.Forms.Label();
             this.actdur = new System.Windows.Forms.Label();
             this.actdur1 = new System.Windows.Forms.DomainUpDown();
@@ -38,35 +36,23 @@
             this.workhigh = new System.Windows.Forms.RadioButton();
             this.worklow = new System.Windows.Forms.RadioButton();
             this.actrem = new System.Windows.Forms.Label();
-            this.actrema = new System.Windows.Forms.DomainUpDown();
             this.actsub = new System.Windows.Forms.Button();
             this.actiname = new System.Windows.Forms.ComboBox();
+            this.actrem1 = new System.Windows.Forms.TextBox();
+            this.mustdo = new System.Windows.Forms.Label();
+            this.addnew = new System.Windows.Forms.GroupBox();
+            this.acthis = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // history
             // 
             this.history.AutoSize = true;
-            this.history.Location = new System.Drawing.Point(12, 9);
+            this.history.Location = new System.Drawing.Point(9, 163);
             this.history.Name = "history";
             this.history.Size = new System.Drawing.Size(68, 13);
             this.history.TabIndex = 0;
             this.history.Text = "About Today";
-            // 
-            // txthistory
-            // 
-            this.txthistory.Location = new System.Drawing.Point(12, 50);
-            this.txthistory.Name = "txthistory";
-            this.txthistory.Size = new System.Drawing.Size(100, 20);
-            this.txthistory.TabIndex = 1;
-            // 
-            // addnew
-            // 
-            this.addnew.AutoSize = true;
-            this.addnew.Location = new System.Drawing.Point(192, 18);
-            this.addnew.Name = "addnew";
-            this.addnew.Size = new System.Drawing.Size(51, 13);
-            this.addnew.TabIndex = 2;
-            this.addnew.Text = "Add New";
+            this.history.Click += new System.EventHandler(this.history_Click);
             // 
             // actname
             // 
@@ -134,16 +120,6 @@
             this.actrem.TabIndex = 10;
             this.actrem.Text = "Remark";
             // 
-            // actrema
-            // 
-            this.actrema.InterceptArrowKeys = false;
-            this.actrema.Items.Add("Unusual");
-            this.actrema.Items.Add("Normal Acitvity");
-            this.actrema.Location = new System.Drawing.Point(356, 180);
-            this.actrema.Name = "actrema";
-            this.actrema.Size = new System.Drawing.Size(120, 20);
-            this.actrema.TabIndex = 11;
-            // 
             // actsub
             // 
             this.actsub.Location = new System.Drawing.Point(334, 221);
@@ -163,15 +139,52 @@
             this.actiname.TabIndex = 13;
             this.actiname.SelectedIndexChanged += new System.EventHandler(this.FillCombo_SelectedIndexChanged);
             // 
+            // actrem1
+            // 
+            this.actrem1.Location = new System.Drawing.Point(355, 179);
+            this.actrem1.Name = "actrem1";
+            this.actrem1.Size = new System.Drawing.Size(120, 20);
+            this.actrem1.TabIndex = 14;
+            this.actrem1.Text = "Say normal or unusual";
+            // 
+            // mustdo
+            // 
+            this.mustdo.AutoSize = true;
+            this.mustdo.Location = new System.Drawing.Point(9, 9);
+            this.mustdo.Name = "mustdo";
+            this.mustdo.Size = new System.Drawing.Size(47, 13);
+            this.mustdo.TabIndex = 15;
+            this.mustdo.Text = "Must Do";
+            this.mustdo.Click += new System.EventHandler(this.mustdo_Click);
+            // 
+            // addnew
+            // 
+            this.addnew.Location = new System.Drawing.Point(209, 19);
+            this.addnew.Name = "addnew";
+            this.addnew.Size = new System.Drawing.Size(300, 261);
+            this.addnew.TabIndex = 16;
+            this.addnew.TabStop = false;
+            this.addnew.Text = "Add New";
+            // 
+            // acthis
+            // 
+            this.acthis.FormattingEnabled = true;
+            this.acthis.Location = new System.Drawing.Point(12, 182);
+            this.acthis.Name = "acthis";
+            this.acthis.Size = new System.Drawing.Size(120, 94);
+            this.acthis.TabIndex = 17;
+            // 
             // ActLog
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.acthis);
+            this.Controls.Add(this.mustdo);
+            this.Controls.Add(this.actrem1);
             this.Controls.Add(this.actiname);
             this.Controls.Add(this.actsub);
-            this.Controls.Add(this.actrema);
             this.Controls.Add(this.actrem);
             this.Controls.Add(this.worklow);
             this.Controls.Add(this.workhigh);
@@ -179,9 +192,8 @@
             this.Controls.Add(this.actdur1);
             this.Controls.Add(this.actdur);
             this.Controls.Add(this.actname);
-            this.Controls.Add(this.addnew);
-            this.Controls.Add(this.txthistory);
             this.Controls.Add(this.history);
+            this.Controls.Add(this.addnew);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ActLog";
             this.Text = "ActLog";
@@ -194,8 +206,6 @@
         #endregion
 
         private System.Windows.Forms.Label history;
-        private System.Windows.Forms.TextBox txthistory;
-        private System.Windows.Forms.Label addnew;
         private System.Windows.Forms.Label actname;
         private System.Windows.Forms.Label actdur;
         private System.Windows.Forms.DomainUpDown actdur1;
@@ -203,8 +213,11 @@
         private System.Windows.Forms.RadioButton workhigh;
         private System.Windows.Forms.RadioButton worklow;
         private System.Windows.Forms.Label actrem;
-        private System.Windows.Forms.DomainUpDown actrema;
         private System.Windows.Forms.Button actsub;
         private System.Windows.Forms.ComboBox actiname;
+        private System.Windows.Forms.TextBox actrem1;
+        private System.Windows.Forms.Label mustdo;
+        private System.Windows.Forms.GroupBox addnew;
+        private System.Windows.Forms.CheckedListBox acthis;
     }
 }
