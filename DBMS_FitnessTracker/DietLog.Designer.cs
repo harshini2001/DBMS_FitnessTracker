@@ -31,32 +31,34 @@ namespace DBMS_FitnessTracker
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.serving_no = new System.Windows.Forms.NumericUpDown();
+            this.remarks = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.diet = new System.Windows.Forms.ComboBox();
+            this.dietsubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.carbo_in = new System.Windows.Forms.RichTextBox();
+            this.protein_in = new System.Windows.Forms.RichTextBox();
+            this.vitamin_in = new System.Windows.Forms.RichTextBox();
+            this.fat_in = new System.Windows.Forms.RichTextBox();
+            this.cal_in = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.junks = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.diettoday = new System.Windows.Forms.CheckedListBox();
             this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serving_no)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -86,27 +88,27 @@ namespace DBMS_FitnessTracker
             this.label4.TabIndex = 3;
             this.label4.Text = "Remark";
             // 
-            // numericUpDown1
+            // serving_no
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(174, 91);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(46, 26);
-            this.numericUpDown1.TabIndex = 5;
+            this.serving_no.Location = new System.Drawing.Point(174, 91);
+            this.serving_no.Name = "serving_no";
+            this.serving_no.Size = new System.Drawing.Size(46, 26);
+            this.serving_no.TabIndex = 5;
             // 
-            // textBox2
+            // remarks
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 26);
-            this.textBox2.TabIndex = 6;
+            this.remarks.Location = new System.Drawing.Point(174, 134);
+            this.remarks.Name = "remarks";
+            this.remarks.Size = new System.Drawing.Size(144, 26);
+            this.remarks.TabIndex = 6;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.diet);
+            this.groupBox1.Controls.Add(this.dietsubmit);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.remarks);
+            this.groupBox1.Controls.Add(this.serving_no);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -116,23 +118,24 @@ namespace DBMS_FitnessTracker
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox1
+            // diet
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(174, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 28);
-            this.comboBox1.TabIndex = 28;
+            this.diet.FormattingEnabled = true;
+            this.diet.Location = new System.Drawing.Point(174, 45);
+            this.diet.Name = "diet";
+            this.diet.Size = new System.Drawing.Size(136, 28);
+            this.diet.TabIndex = 28;
             // 
-            // button1
+            // dietsubmit
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.button1.Location = new System.Drawing.Point(174, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 29);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Add in my Log";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dietsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dietsubmit.Location = new System.Drawing.Point(174, 185);
+            this.dietsubmit.Name = "dietsubmit";
+            this.dietsubmit.Size = new System.Drawing.Size(144, 29);
+            this.dietsubmit.TabIndex = 27;
+            this.dietsubmit.Text = "Add in my Log";
+            this.dietsubmit.UseVisualStyleBackColor = true;
+            this.dietsubmit.Click += new System.EventHandler(this.dietsubmit_Click);
             // 
             // label1
             // 
@@ -189,56 +192,56 @@ namespace DBMS_FitnessTracker
             this.label9.TabIndex = 12;
             this.label9.Text = "Junks till now";
             // 
-            // richTextBox1
+            // carbo_in
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(169, 40);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(44, 32);
-            this.richTextBox1.TabIndex = 13;
-            this.richTextBox1.Text = "";
+            this.carbo_in.Location = new System.Drawing.Point(170, 40);
+            this.carbo_in.Name = "carbo_in";
+            this.carbo_in.Size = new System.Drawing.Size(74, 32);
+            this.carbo_in.TabIndex = 13;
+            this.carbo_in.Text = "";
             // 
-            // richTextBox3
+            // protein_in
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(169, 92);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(44, 32);
-            this.richTextBox3.TabIndex = 15;
-            this.richTextBox3.Text = "";
+            this.protein_in.Location = new System.Drawing.Point(170, 92);
+            this.protein_in.Name = "protein_in";
+            this.protein_in.Size = new System.Drawing.Size(74, 32);
+            this.protein_in.TabIndex = 15;
+            this.protein_in.Text = "";
             // 
-            // richTextBox5
+            // vitamin_in
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(169, 128);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(44, 32);
-            this.richTextBox5.TabIndex = 17;
-            this.richTextBox5.Text = "";
+            this.vitamin_in.Location = new System.Drawing.Point(170, 128);
+            this.vitamin_in.Name = "vitamin_in";
+            this.vitamin_in.Size = new System.Drawing.Size(74, 32);
+            this.vitamin_in.TabIndex = 17;
+            this.vitamin_in.Text = "";
             // 
-            // richTextBox7
+            // fat_in
             // 
-            this.richTextBox7.Location = new System.Drawing.Point(169, 174);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(44, 32);
-            this.richTextBox7.TabIndex = 19;
-            this.richTextBox7.Text = "";
+            this.fat_in.Location = new System.Drawing.Point(170, 174);
+            this.fat_in.Name = "fat_in";
+            this.fat_in.Size = new System.Drawing.Size(74, 32);
+            this.fat_in.TabIndex = 19;
+            this.fat_in.Text = "";
             // 
-            // richTextBox9
+            // cal_in
             // 
-            this.richTextBox9.Location = new System.Drawing.Point(169, 262);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(91, 32);
-            this.richTextBox9.TabIndex = 21;
-            this.richTextBox9.Text = "";
+            this.cal_in.Location = new System.Drawing.Point(170, 262);
+            this.cal_in.Name = "cal_in";
+            this.cal_in.Size = new System.Drawing.Size(91, 32);
+            this.cal_in.TabIndex = 21;
+            this.cal_in.Text = "";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Controls.Add(this.junks);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.richTextBox9);
-            this.groupBox2.Controls.Add(this.richTextBox7);
-            this.groupBox2.Controls.Add(this.richTextBox5);
-            this.groupBox2.Controls.Add(this.richTextBox3);
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.cal_in);
+            this.groupBox2.Controls.Add(this.fat_in);
+            this.groupBox2.Controls.Add(this.vitamin_in);
+            this.groupBox2.Controls.Add(this.protein_in);
+            this.groupBox2.Controls.Add(this.carbo_in);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -250,13 +253,13 @@ namespace DBMS_FitnessTracker
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             // 
-            // richTextBox2
+            // junks
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(169, 212);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(44, 32);
-            this.richTextBox2.TabIndex = 24;
-            this.richTextBox2.Text = "";
+            this.junks.Location = new System.Drawing.Point(170, 212);
+            this.junks.Name = "junks";
+            this.junks.Size = new System.Drawing.Size(74, 32);
+            this.junks.TabIndex = 24;
+            this.junks.Text = "";
             // 
             // label11
             // 
@@ -279,22 +282,32 @@ namespace DBMS_FitnessTracker
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.diettoday);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.groupBox3.Location = new System.Drawing.Point(785, 103);
+            this.groupBox3.Location = new System.Drawing.Point(784, 97);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 346);
+            this.groupBox3.Size = new System.Drawing.Size(260, 352);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Already Taken Today";
+            // 
+            // diettoday
+            // 
+            this.diettoday.FormattingEnabled = true;
+            this.diettoday.Location = new System.Drawing.Point(10, 46);
+            this.diettoday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.diettoday.Name = "diettoday";
+            this.diettoday.Size = new System.Drawing.Size(243, 142);
+            this.diettoday.TabIndex = 0;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(56, 474);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(384, 20);
+            this.label12.Size = new System.Drawing.Size(281, 20);
             this.label12.TabIndex = 26;
-            this.label12.Text = "***All nutrients are in unit  per  and calories are in unit ";
+            this.label12.Text = "***All nutrients are in unit g per serving ";
             // 
             // DietLog
             // 
@@ -308,11 +321,13 @@ namespace DBMS_FitnessTracker
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DietLog";
             this.Text = "DietLog";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serving_no)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,8 +337,8 @@ namespace DBMS_FitnessTracker
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.NumericUpDown serving_no;
+        private System.Windows.Forms.TextBox remarks;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
@@ -331,19 +346,24 @@ namespace DBMS_FitnessTracker
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.RichTextBox richTextBox9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox carbo_in;
+        private System.Windows.Forms.RichTextBox protein_in;
+        private System.Windows.Forms.RichTextBox vitamin_in;
+        private System.Windows.Forms.RichTextBox fat_in;
+        private System.Windows.Forms.RichTextBox cal_in;
+
+        private System.Windows.Forms.Button dietsubmit;
+
+        private System.Windows.Forms.ComboBox diet;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox junks;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+
+        private System.Windows.Forms.CheckedListBox diettoday;
+
     }
 }
